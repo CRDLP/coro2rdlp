@@ -1,0 +1,70 @@
+:root {
+    --light-red: #ff6b6b;
+    --light-blue: #4ecdc4;
+    --navy-blue: #1a4b84;
+    --soft-white: #f4f4f4;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--soft-white);
+    margin: 0;
+    padding: 0;
+    cursor: url('heart-cursor.png'), auto;
+}
+
+header {
+    background: linear-gradient(to right, var(--light-red), var(--light-blue));
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.musical-notes {
+    animation: float 2s infinite alternate;
+}
+
+.musical-notes .note {
+    display: inline-block;
+    font-size: 2em;
+    margin: 0 5px;
+    color: white;
+}
+
+.carousel img {
+    max-width: 100%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel img:hover {
+    opacity: 1;
+}
+
+/* Guitar silhouette animation */
+@keyframes guitar-sway {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+.guitar-silhouette {
+    animation: guitar-sway 1.5s infinite alternate;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+    }
+}
